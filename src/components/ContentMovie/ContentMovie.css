@@ -1,0 +1,31 @@
+.movie{
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    border-radius: 5px;
+    width: 300px;
+    margin: 10px;
+    background-color: #1ccfc9;
+    color:#fffbe8;
+}
+.movie:hover{
+    background-color: #ff485b;
+    color:#1ccfc9;
+    cursor: pointer;
+}
+h3{
+    font-size: 20px;
+    text-align: center;
+}
+.movie img{
+    max-width: 100%;
+}
+.description{
+    display: flex;
+    justify-content: space-evenly;
+    padding-bottom: 10px;
+}
+.date{
+    text-align: center;
+    padding-bottom: 10px;
+}
