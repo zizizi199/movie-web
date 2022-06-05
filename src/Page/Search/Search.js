@@ -1,14 +1,15 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import ContentMovie from '../../components/ContentMovie/ContentMovie'
+import './Search.css'
 
 function Search() {
     const [search, setSearch] = useState('')
     const [movies, setMovies] = useState([])
 
     const getMovies = async(API) => {
-        const {data} = await axios.get(API)
-        setMovies(data.results);
+        const fetchData = await axios.get(API)
+        setMovies(fetchData.data.results);
     }
 
     useEffect(() => {
@@ -20,7 +21,7 @@ function Search() {
         if (search) {
             getMovies(`
             https://api.themoviedb.org/3/search/movie?api_key=41644fe1a73197eae351ccc0e705d6f0&language=en-US
-            &query=${search}`)
+            &query=` +search)
             setSearch('')
         }
     }
