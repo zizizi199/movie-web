@@ -5,6 +5,7 @@ import './Pagination.css'
 function Pagination({setPage}){
   const handleClick=(e)=>{
       setPage(e.selected+1);
+      console.log(typeof(setPage));
   }
   return (
     <ReactPaginate 

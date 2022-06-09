@@ -8,7 +8,7 @@ function Home() {
     const [page, setPage] = useState(1)
     const [movies, setMovies] = useState([])
    
-    
+                                                                                                        
     useEffect(() => {
         const fetchHome = async () => {
             const fetchData = await axios.get(`
@@ -37,7 +37,7 @@ function Home() {
                 }}
             >
                 {movies.map((movie) => (
-                    <ContentMovie key={movie.id} {...movie} />
+                    <ContentMovie key={movie.id} movie= {movie} />
                 ))}
             </div>
            <Pagination setPage={setPage}/>

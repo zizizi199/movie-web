@@ -44,7 +44,7 @@ function Search() {
             }}
             >
                 {movies.map((movie) => (
-                    <ContentMovie key={movie.id} {...movie} />
+                    <ContentMovie key={movie.id} movie={movie} />
                 ))}
             </div>
         </div>

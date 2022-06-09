@@ -3,7 +3,7 @@ import './ContentMovie.css'
 const IMG_API = 'https://image.tmdb.org/t/p/w500/';
 
 
-function ContentMovie({ ...movie}) {
+function ContentMovie({movie}) {
     return (
         <div className='movie'>
             <img src={movie.poster_path?IMG_API + movie.poster_path : 'https://www.movienewz.com/img/films/poster-holder.jpg' } alt={movie.name} />

@@ -36,7 +36,7 @@ function Series(){
                 }}
             >
                 {movies.map((movie) => (
-                    <ContentMovie key={movie.id} {...movie} />
+                    <ContentMovie key={movie.id} movie={movie} />
                 ))}
             </div>
            <Pagination setPage={setPage}/>
